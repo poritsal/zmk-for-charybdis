@@ -12,7 +12,7 @@
     quick-tap-ms = <150>;
 };
 
-/ {
+ / {
     trackball_listener {
         compatible = "zmk,input-listener";
         input-processors = <&zip_xy_scaler 9 20>;
@@ -26,7 +26,6 @@
         };
     };
 
- {
     combos {
         compatible = "zmk,combos";
 
@@ -115,17 +114,5 @@
                                 &trans  &trans    &trans
             >;
         };
-    };
-};
-
-&trackball_listener {
-    input-processors = <&zip_xy_scaler 9 20>;
-
-    scroller {
-        layers = <4>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_scaler 1 32>,
-            <&zip_xy_to_scroll_mapper>;
     };
 };
