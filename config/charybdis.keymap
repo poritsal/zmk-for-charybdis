@@ -32,18 +32,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        QWERTY {
+        base {
             bindings = <
-&kp ESC       &kp N1  &kp N2  &kp N3     &kp N4            &kp N5          &kp N6     &kp N7           &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB       &kp Q   &kp W   &kp E      &kp R             &kp T           &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSLH
-&kp CAPSLOCK  &kp A   &kp S   &kp D      &kp F             &kp G           &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp MINUS     &kp Z   &kp X   &kp C      &kp V             &lt 3 B         &kp N      &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
-                              &kp SPACE  &kp LEFT_ALT      &kp LEFT_GUI    &kp ENTER  &kp RIGHT_SHIFT
-                                         &kp LEFT_CONTROL  &mo 1           &mo 2
+&kp GRAVE   &kp N1  &kp N2  &kp N3     &kp N4            &kp N5          &kp N6     &kp N7           &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB     &kp Q   &kp W   &kp E      &kp R             &kp T           &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSLH
+&kp ESCAPE  &kp A   &kp S   &kp D      &kp F             &lt 4 G         &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp MINUS   &kp Z   &kp X   &kp C      &kp V             &lt 3 B         &kp N      &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp EQUAL
+                            &kp SPACE  &kp LEFT_ALT      &kp LEFT_GUI    &kp ENTER  &kp RIGHT_SHIFT
+                                       &kp LEFT_CONTROL  &mo 1           &mo 2
             >;
         };
 
-        F_layers {
+        num {
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7     &kp F8     &kp F9    &kp F10       &kp F11    &kp F12
 &trans  &none   &none   &none   &none   &trans    &none      &none      &none     &kp UP_ARROW  &kp MINUS  &kp EQUAL
@@ -54,14 +54,14 @@
             >;
         };
 
-        layer_3 {
+        sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &kp AT_SIGN           &kp AMPERSAND    &kp CARET              &trans          &trans     &trans                &trans          &trans            &trans  &trans
+&trans  &trans  &kp LESS_THAN         &kp COLON        &kp RIGHT_BRACKET      &kp PLUS        &kp TILDE  &kp HASH              &kp UNDERSCORE  &kp PERCENT       &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp SEMICOLON    &kp RIGHT_PARENTHESIS  &kp EQUAL       &kp GRAVE  &kp LESS_THAN         &kp MINUS       &kp GREATER_THAN  &trans  &trans
+&trans  &trans  &kp LEFT_BRACE        &kp EXCLAMATION  &kp RIGHT_BRACE        &kp ASTERISK    &kp PIPE   &kp NON_US_BACKSLASH  &kp AMPERSAND   &kp SLASH         &trans  &trans
+                                      &trans           &trans                 &trans          &trans     &trans
+                                                       &trans                 &trans          &trans
             >;
         };
 
@@ -73,6 +73,17 @@
 &trans  &trans          &trans        &bt BT_CLR    &trans        &trans          &bt BT_NXT  &trans  &trans  &trans  &trans  &trans
                                       &trans        &trans        &trans          &trans      &trans
                                                     &trans        &trans          &trans
+            >;
+        };
+
+        scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
     };
