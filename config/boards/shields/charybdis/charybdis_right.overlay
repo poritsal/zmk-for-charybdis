@@ -58,6 +58,7 @@
         scroll-layers = <3>;
         snipe-layers = <4>;
         automouse-layer = <5>;
+		acceleration-exponent = <2>;
     };
 };
 
